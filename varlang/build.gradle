@@ -1,0 +1,13 @@
+task runInterpreter(type: JavaExec) {
+  classpath sourceSets.main.runtimeClasspath
+}
+
+run {
+   standardInput = System.in
+}
+
+mainClassName="varlang.Interpreter"
+
+generateGrammarSource {
+    arguments += ["-lib", "../grammars", "-no-listener", "-package", "varlang.parser; import static varlang.AST.*"]
+}

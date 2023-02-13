@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/varlang/build/
+/varlang/build/classes/java/main/
